@@ -1,0 +1,108 @@
+=================================================
+            Trace Event Information              
+=================================================
+  Total records                     :        426
+  Locked Load/Store Operations      :         41
+  Load Operations                   :        187
+  Loads - uncacheable               :          0
+  Loads - IO                        :          0
+  Loads - Miss                      :          0
+  Loads - no mapping                :          1
+  Load Fill Buffer Hit              :         92
+  Load L1D hit                      :         59
+  Load L2D hit                      :          0
+  Load LLC hit                      :         35
+  Load Local HITM                   :         15
+  Load Remote HITM                  :          0
+  Load Remote HIT                   :          0
+  Load Local DRAM                   :          0
+  Load Remote DRAM                  :          0
+  Load MESI State Exclusive         :          0
+  Load MESI State Shared            :          0
+  Load LLC Misses                   :          0
+  Load access blocked by data       :          0
+  Load access blocked by address    :          0
+  Load HIT Local Peer               :          0
+  Load HIT Remote Peer              :          0
+  LLC Misses to Local DRAM          :       -nan%
+  LLC Misses to Remote DRAM         :       -nan%
+  LLC Misses to Remote cache (HIT)  :       -nan%
+  LLC Misses to Remote cache (HITM) :       -nan%
+  Store Operations                  :        239
+  Store - uncacheable               :          0
+  Store - no mapping                :          1
+  Store L1D Hit                     :        226
+  Store L1D Miss                    :         12
+  Store No available memory level   :          0
+  No Page Map Rejects               :          0
+  Unable to parse data source       :          0
+
+=================================================
+    Global Shared Cache Line Event Information   
+=================================================
+  Total Shared Cache Lines          :          2
+  Load HITs on shared lines         :        113
+  Fill Buffer Hits on shared lines  :         53
+  L1D hits on shared lines          :         37
+  L2D hits on shared lines          :          0
+  LLC hits on shared lines          :         23
+  Load hits on peer cache or nodes  :          0
+  Locked Access on shared lines     :         41
+  Blocked Access on shared lines    :          0
+  Store HITs on shared lines        :         46
+  Store L1D hits on shared lines    :         35
+  Store No available memory level   :          0
+  Total Merged records              :         61
+
+=================================================
+                 c2c details                     
+=================================================
+  Events                            : cpu/mem-loads,ldlat=30/P
+                                    : cpu/mem-stores/P
+  Cachelines sort on                : Total HITMs
+  Cacheline data grouping           : offset,iaddr
+
+=================================================
+           Shared Data Cache Line Table          
+=================================================
+#
+#        ----------- Cacheline ----------      Tot  ------- Load Hitm -------    Total    Total    Total  --------- Stores --------  ----- Core Load Hit -----  - LLC Load Hit --  - RMT Load Hit --  --- Load Dram ----
+# Index             Address  Node  PA cnt     Hitm    Total  LclHitm  RmtHitm  records    Loads   Stores    L1Hit   L1Miss      N/A       FB       L1       L2    LclHit  LclHitm    RmtHit  RmtHitm       Lcl       Rmt
+# .....  ..................  ....  ......  .......  .......  .......  .......  .......  .......  .......  .......  .......  .......  .......  .......  .......  ........  .......  ........  .......  ........  ........
+#
+      0      0x5cad3ae0d280     0     100   93.33%       14       14        0      137       93       44       33       11        0       42       31        0         6       14         0        0         0         0
+      1      0x5cad3ae0d380     0      17    6.67%        1        1        0       22       20        2        2        0        0       11        6        0         2        1         0        0         0         0
+
+=================================================
+      Shared Cache Line Distribution Pareto      
+=================================================
+#
+#        ----- HITM -----  ------- Store Refs ------  --------- Data address ---------                      ---------- cycles ----------    Total       cpu                                        Shared                                 
+#   Num  RmtHitm  LclHitm   L1 Hit  L1 Miss      N/A              Offset  Node  PA cnt        Code address  rmt hitm  lcl hitm      load  records       cnt                          Symbol        Object                Source:Line  Node{cpu list}
+# .....  .......  .......  .......  .......  .......  ..................  ....  ......  ..................  ........  ........  ........  .......  ........  ..............................  ............  .........................  ....
+#
+  ----------------------------------------------------------------------
+      0        0       14       33       11        0      0x5cad3ae0d280
+  ----------------------------------------------------------------------
+           0.00%    7.14%    0.00%    0.00%    0.00%                 0x0     0       1      0x5cad3ae07461         0       109        85        3         1  [.] thread_runner(void*)        problem1.out  thread_runner(void*)+552    0{0}
+           0.00%    0.00%    0.00%    9.09%    0.00%                 0x0     0       1      0x5cad3ae0747e         0         0         0        1         1  [.] thread_runner(void*)        problem1.out  thread_runner(void*)+581    0{0}
+           0.00%    7.14%    0.00%    0.00%    0.00%                 0x8     0       1      0x5cad3ae07461         0       133        54        2         1  [.] thread_runner(void*)        problem1.out  thread_runner(void*)+552    0{11}
+           0.00%    0.00%    3.03%   36.36%    0.00%                 0x8     0       1      0x5cad3ae0747e         0         0         0        5         1  [.] thread_runner(void*)        problem1.out  thread_runner(void*)+581    0{11}
+           0.00%   14.29%    0.00%    0.00%    0.00%                0x10     0       1      0x5cad3ae07461         0       153         0        2         1  [.] thread_runner(void*)        problem1.out  thread_runner(void*)+552    0{9}
+           0.00%    0.00%    0.00%   18.18%    0.00%                0x10     0       1      0x5cad3ae0747e         0         0         0        2         1  [.] thread_runner(void*)        problem1.out  thread_runner(void*)+581    0{9}
+           0.00%   21.43%    0.00%    0.00%    0.00%                0x18     0       1      0x5cad3ae07461         0       110       110        4         1  [.] thread_runner(void*)        problem1.out  thread_runner(void*)+552    0{8}
+           0.00%    0.00%   15.15%   18.18%    0.00%                0x18     0       1      0x5cad3ae0747e         0         0         0        7         1  [.] thread_runner(void*)        problem1.out  thread_runner(void*)+581    0{8}
+           0.00%    7.14%    0.00%    0.00%    0.00%                0x20     0       1      0x5cad3ae07381         0       102         0        1         1  [.] thread_runner(void*)        problem1.out  thread_runner(void*)+328    0{11}
+           0.00%   21.43%    0.00%    0.00%    0.00%                0x30     0       1      0x702515091294         0       239         0        3         2  [.] __GI___lll_lock_wait        libc.so.6     lowlevellock.c:42           0{0,8}
+           0.00%   14.29%   39.39%    0.00%    0.00%                0x30     0       1      0x702515099aa4         0       512       197       33         4  [.] pthread_mutex_unlock@@GLIB  libc.so.6     pthread_mutex_unlock.c:43   0{0,8-9,11}
+           0.00%    7.14%   30.30%    0.00%    0.00%                0x30     0       1      0x702515097f40         0       487       188       20         4  [.] pthread_mutex_lock@@GLIBC_  libc.so.6     pthread_mutex_lock.c:48     0{0,8-9,11}
+           0.00%    0.00%    3.03%    0.00%    0.00%                0x30     0       1      0x7025150912a3         0         0       157        6         2  [.] __GI___lll_lock_wait        libc.so.6     lowlevellock.c:45           0{0,11}
+           0.00%    0.00%    3.03%    0.00%    0.00%                0x38     0       1      0x702515097f5d         0         0         0        1         1  [.] pthread_mutex_lock@@GLIBC_  libc.so.6     pthread_mutex_lock.c:170    0{9}
+           0.00%    0.00%    6.06%   18.18%    0.00%                0x3c     0       1      0x702515099a8c         0         0       120       15         4  [.] pthread_mutex_unlock@@GLIB  libc.so.6     pthread_mutex_unlock.c:65   0{0,8-9,11}
+
+  ----------------------------------------------------------------------
+      1        0        1        2        0        0      0x5cad3ae0d380
+  ----------------------------------------------------------------------
+           0.00%    0.00%   50.00%    0.00%    0.00%                 0x0     0       1      0x702515097f40         0         0       176        4         3  [.] pthread_mutex_lock@@GLIBC_  libc.so.6  pthread_mutex_lock.c:48     0{0,9,11}
+           0.00%    0.00%   50.00%    0.00%    0.00%                 0x0     0       1      0x702515099aa4         0         0       185        4         2  [.] pthread_mutex_unlock@@GLIB  libc.so.6  pthread_mutex_unlock.c:43   0{8,11}
+           0.00%  100.00%    0.00%    0.00%    0.00%                0x10     0       1      0x702515097ef4         0       100       102        3         3  [.] pthread_mutex_lock@@GLIBC_  libc.so.6  pthread_mutex_lock.c:80     0{8-9,11}
