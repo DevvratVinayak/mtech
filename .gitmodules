@@ -1,0 +1,3 @@
+[submodule "cs697/openwhisk"]
+	path = cs697/openwhisk
+	url = https://github.com/apache/openwhisk
