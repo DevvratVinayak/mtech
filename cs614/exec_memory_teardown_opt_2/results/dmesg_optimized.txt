@@ -1,7 +1,0 @@
-[ 9384.913120] target PID set to 107315
-[ 9384.913167] [exec_probe] do_execveat_common ENTRY pid=107315 comm=test10_bin start=9385037085342 ns old_mm=ffff8d5dc2df1000
-[ 9384.913864] [exec_probe] exec_deferred_mmput ENTRY pid=107315 comm=test10_bin start=9385037782143 ns
-[ 9384.913867] [exec_probe] exit_mmap ENTRY mm=ffff8d5dc2df1000 worker=test10_bin start=9385037785063 ns (ASYNC TEARDOWN)
-[ 9384.955886] [exec_probe] exit_mmap RETURN mm=ffff8d5dc2df1000 worker=test10_bin start=9385037785063 ns end=9385079804492 ns elapsed=42019429 ns (42019 us) (ASYNC TEARDOWN COMPLETE)
-[ 9384.955895] [exec_probe] exec_deferred_mmput RETURN pid=107315 comm=test10_bin start=9385037782143 ns end=9385079813837 ns elapsed=42031694 ns (42031 us) [sync cost seen by execve]
-[ 9384.956279] [exec_probe] do_execveat_common RETURN pid=107315 comm=test10_bin start=9385037085342 ns end=9385080197437 ns elapsed=43112095 ns (43112 us)
