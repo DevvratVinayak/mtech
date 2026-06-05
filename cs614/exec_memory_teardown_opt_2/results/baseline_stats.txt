@@ -1,0 +1,18 @@
+enabled:          0
+min_pages:        1024
+oom_shift:        4
+max_pending:      64
+---
+async_teardowns:  0
+sync_teardowns:   0
+pending:          0
+---
+avg_teardown_us:  0
+max_teardown_us:  0
+avg_vm_pages:     0
+---
+lat_<1ms:         0
+lat_1-5ms:        0
+lat_5-20ms:       0
+lat_20-100ms:     0
+lat_>100ms:       0

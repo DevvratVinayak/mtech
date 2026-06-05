@@ -1,0 +1,160 @@
+[pid 29502]--->do_execveat_common() {
+[pid 29502]  --->alloc_bprm() {
+[pid 29502]  <---alloc_bprm() inc= 13191 ns, exc= 13191 ns }
+[pid 29502]  --->count() {
+[pid 29502]  <---count() inc=   282 ns, exc=   282 ns }
+[pid 29502]  --->count() {
+[pid 29502]  <---count() inc=   423 ns, exc=   423 ns }
+[pid 29502]  --->bprm_stack_limits() {
+[pid 29502]  <---bprm_stack_limits() inc=   277 ns, exc=   277 ns }
+[pid 29502]  --->copy_string_kernel() {
+[pid 29502]    --->acct_arg_size() {
+[pid 29502]    <---acct_arg_size() inc=   485 ns, exc=   485 ns }
+[pid 29502]  <---copy_string_kernel() inc= 12551 ns, exc= 12066 ns }
+[pid 29502]  --->copy_strings() {
+[pid 29502]    --->acct_arg_size() {
+[pid 29502]    <---acct_arg_size() inc=   212 ns, exc=   212 ns }
+[pid 29502]  <---copy_strings() inc=  3255 ns, exc=  3043 ns }
+[pid 29502]  --->copy_strings() {
+[pid 29502]  <---copy_strings() inc=   200 ns, exc=   200 ns }
+[pid 29502]  --->copy_string_kernel() {
+[pid 29502]    --->acct_arg_size() {
+[pid 29502]    <---acct_arg_size() inc=   191 ns, exc=   191 ns }
+[pid 29502]  <---copy_string_kernel() inc=   887 ns, exc=   696 ns }
+[pid 29502]  --->bprm_execve() {
+[pid 29502]    --->prepare_bprm_creds() {
+[pid 29502]    <---prepare_bprm_creds() inc=  2561 ns, exc=  2561 ns }
+[pid 29502]    --->check_unsafe_exec() {
+[pid 29502]    <---check_unsafe_exec() inc=   910 ns, exc=   910 ns }
+[pid 29502]    --->do_open_execat() {
+[pid 29502]    <---do_open_execat() inc= 73858 ns, exc= 73858 ns }
+[pid 29502]    --->exec_binprm() {
+[pid 29502]      --->search_binary_handler() {
+[pid 29502]        --->load_elf_binary() {
+[pid 29502]          --->elf_read() {
+[pid 29502]          <---elf_read() inc=   483 ns, exc=   483 ns }
+[pid 29502]          --->elf_read() {
+[pid 29502]          <---elf_read() inc=   376 ns, exc=   376 ns }
+[pid 29502]          --->do_open_execat() {
+[pid 29502]          <---do_open_execat() inc=  6051 ns, exc=  6051 ns }
+[pid 29502]          --->elf_read() {
+[pid 29502]          <---elf_read() inc=  1265 ns, exc=  1265 ns }
+[pid 29502]          --->elf_read() {
+[pid 29502]          <---elf_read() inc=   365 ns, exc=   365 ns }
+[pid 29502]          --->begin_new_exec() {
+[pid 29502]            --->de_thread() {
+[pid 29502]              --->zap_other_threads() {
+[pid 29502]              <---zap_other_threads() inc=  9390 ns, exc=  9390 ns }
+[pid 29502]            <---de_thread() inc= 41188 ns, exc= 31798 ns }
+[pid 29502]            --->unshare_files() {
+[pid 29502]            <---unshare_files() inc=  1728 ns, exc=  1728 ns }
+[pid 29502]            --->set_mm_exe_file() {
+[pid 29502]            <---set_mm_exe_file() inc=   268 ns, exc=   268 ns }
+[pid 29502]            --->acct_arg_size() {
+[pid 29502]            <---acct_arg_size() inc=   221 ns, exc=   221 ns }
+[pid 29502]            --->exec_mmap() {
+[pid 29502]              --->exec_mm_release() {
+[pid 29502]              <---exec_mm_release() inc=  2539 ns, exc=  2539 ns }
+[pid 29502]            <---exec_mmap() inc= 30489 ns, exc= 27950 ns }
+[pid 29502]            --->unshare_sighand() {
+[pid 29502]            <---unshare_sighand() inc=  1466 ns, exc=  1466 ns }
+[pid 29502]            --->do_close_on_exec() {
+[pid 29502]            <---do_close_on_exec() inc=   353 ns, exc=   353 ns }
+[pid 29502]          <---begin_new_exec() inc= 82969 ns, exc=  7256 ns }
+[pid 29502]          --->setup_new_exec() {
+[pid 29502]          <---setup_new_exec() inc=  1172 ns, exc=  1172 ns }
+[pid 29502]          --->setup_arg_pages() {
+[pid 29502]          <---setup_arg_pages() inc=208452 ns, exc=208452 ns }
+[pid 29502]          --->finalize_exec() {
+[pid 29502]          <---finalize_exec() inc=   527 ns, exc=   527 ns }
+[pid 29502]        <---load_elf_binary() inc=359876 ns, exc= 58216 ns }
+[pid 29502]      <---search_binary_handler() inc=365357 ns, exc=  5481 ns }
+[pid 29502]    <---exec_binprm() inc=366731 ns, exc=  1374 ns }
+[pid 29502]  <---bprm_execve() inc=457420 ns, exc= 13360 ns }
+[pid 29502]  --->free_bprm() {
+[pid 29502]  <---free_bprm() inc=   418 ns, exc=   418 ns }
+[pid 29502]<---do_execveat_common() inc=497996 ns, exc=  9092 ns }
+[pid 29502]--->do_execveat_common() {
+[pid 29502]  --->alloc_bprm() {
+[pid 29502]  <---alloc_bprm() inc=190568 ns, exc=190568 ns }
+[pid 29502]  --->count() {
+[pid 29502]  <---count() inc=   775 ns, exc=   775 ns }
+[pid 29502]  --->count() {
+[pid 29502]  <---count() inc=   595 ns, exc=   595 ns }
+[pid 29502]  --->bprm_stack_limits() {
+[pid 29502]  <---bprm_stack_limits() inc=   343 ns, exc=   343 ns }
+[pid 29502]  --->copy_string_kernel() {
+[pid 29502]    --->acct_arg_size() {
+[pid 29502]    <---acct_arg_size() inc=   607 ns, exc=   607 ns }
+[pid 29502]  <---copy_string_kernel() inc= 14329 ns, exc= 13722 ns }
+[pid 29502]  --->copy_strings() {
+[pid 29502]    --->acct_arg_size() {
+[pid 29502]    <---acct_arg_size() inc=   257 ns, exc=   257 ns }
+[pid 29502]  <---copy_strings() inc=  3966 ns, exc=  3709 ns }
+[pid 29502]  --->copy_strings() {
+[pid 29502]    --->acct_arg_size() {
+[pid 29502]    <---acct_arg_size() inc=   230 ns, exc=   230 ns }
+[pid 29502]  <---copy_strings() inc=  1395 ns, exc=  1165 ns }
+[pid 29502]  --->bprm_execve() {
+[pid 29502]    --->prepare_bprm_creds() {
+[pid 29502]    <---prepare_bprm_creds() inc=  2862 ns, exc=  2862 ns }
+[pid 29502]    --->check_unsafe_exec() {
+[pid 29502]    <---check_unsafe_exec() inc=  1185 ns, exc=  1185 ns }
+[pid 29502]    --->do_open_execat() {
+[pid 29502]    <---do_open_execat() inc=  7776 ns, exc=  7776 ns }
+[pid 29502]    --->exec_binprm() {
+[pid 29502]      --->search_binary_handler() {
+[pid 29502]        --->load_elf_binary() {
+[pid 29502]          --->elf_read() {
+[pid 29502]          <---elf_read() inc=   637 ns, exc=   637 ns }
+[pid 29502]          --->elf_read() {
+[pid 29502]          <---elf_read() inc=   402 ns, exc=   402 ns }
+[pid 29502]          --->do_open_execat() {
+[pid 29502]          <---do_open_execat() inc=  3657 ns, exc=  3657 ns }
+[pid 29502]          --->elf_read() {
+[pid 29502]          <---elf_read() inc=  1094 ns, exc=  1094 ns }
+[pid 29502]          --->elf_read() {
+[pid 29502]          <---elf_read() inc=   522 ns, exc=   522 ns }
+[pid 29502]          --->begin_new_exec() {
+[pid 29502]            --->de_thread() {
+[pid 29502]              --->zap_other_threads() {
+[pid 29502]              <---zap_other_threads() inc= 20261 ns, exc= 20261 ns }
+[pid 29505]              --->set_mm_exe_file() {
+[pid 29505]              <---set_mm_exe_file() inc=  1155 ns, exc=  1155 ns }
+[pid 29502]            <---de_thread() inc=203607 ns, exc=182191 ns }
+[pid 29502]            --->unshare_files() {
+[pid 29502]            <---unshare_files() inc=  1955 ns, exc=  1955 ns }
+[pid 29502]            --->set_mm_exe_file() {
+[pid 29502]            <---set_mm_exe_file() inc=   326 ns, exc=   326 ns }
+[pid 29502]            --->acct_arg_size() {
+[pid 29502]            <---acct_arg_size() inc=   280 ns, exc=   280 ns }
+[pid 29502]            --->exec_mmap() {
+[pid 29502]              --->exec_mm_release() {
+[pid 29502]              <---exec_mm_release() inc=  1708 ns, exc=  1708 ns }
+[pid 29502]            <---exec_mmap() inc= 29771 ns, exc= 28063 ns }
+[pid 29502]            --->unshare_sighand() {
+[pid 29502]            <---unshare_sighand() inc=  1066 ns, exc=  1066 ns }
+[pid 29502]            --->do_close_on_exec() {
+[pid 29502]            <---do_close_on_exec() inc=   512 ns, exc=   512 ns }
+[pid 29502]          <---begin_new_exec() inc=245945 ns, exc=  8428 ns }
+[pid 29502]          --->setup_new_exec() {
+[pid 29502]          <---setup_new_exec() inc=   973 ns, exc=   973 ns }
+[pid 29502]          --->setup_arg_pages() {
+[pid 29502]          <---setup_arg_pages() inc= 14372 ns, exc= 14372 ns }
+[pid 29502]          --->finalize_exec() {
+[pid 29502]          <---finalize_exec() inc=   420 ns, exc=   420 ns }
+[pid 29502]        <---load_elf_binary() inc=324113 ns, exc= 56091 ns }
+[pid 29502]      <---search_binary_handler() inc=329651 ns, exc=  5538 ns }
+[pid 29502]    <---exec_binprm() inc=331048 ns, exc=  1397 ns }
+[pid 29502]  <---bprm_execve() inc=357149 ns, exc= 14278 ns }
+[pid 29502]  --->free_bprm() {
+[pid 29502]  <---free_bprm() inc=   571 ns, exc=   571 ns }
+[pid 29502]<---do_execveat_common() inc=584556 ns, exc= 14865 ns }
+[pid 29502]--->zap_other_threads() {
+[pid 29502]<---zap_other_threads() inc= 15535 ns, exc= 15535 ns }
+[pid 29502]--->set_mm_exe_file() {
+[pid 29502]<---set_mm_exe_file() inc=   858 ns, exc=   858 ns }
+[pid 29507]--->set_mm_exe_file() {
+[pid 29507]<---set_mm_exe_file() inc=   910 ns, exc=   910 ns }
+[pid 29507]--->__wake_up_parent() {
+[pid 29507]<---__wake_up_parent() inc=   646 ns, exc=   646 ns }
