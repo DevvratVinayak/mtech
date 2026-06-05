@@ -1,0 +1,3 @@
+This directory will be populated by:
+  sudo ./scripts/run_experiments.sh all
+  python3 scripts/plot_results.py
